@@ -1,0 +1,43 @@
+:root {
+  /* CSS HEX */
+  --charcoal: #264653ff;
+  --persian-green: #2a9d8fff;
+  --orange-yellow-crayola: #e9c46aff;
+  --sandy-brown: #f4a261ff;
+  --burnt-sienna: #e76f51ff;
+
+  --background-page: #ffff;
+  --height-header: 52px;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-page);
+  height: 100vh;
+}
+
+.header {
+  height: var(--height-header);
+  background-color: var(--charcoal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .header-image {
+  width: 45px;
+  margin-right: 1rem;
+}
+
+.header > .header-title {
+  font-size: 1.5rem;
+  color: #ffff;
+}
