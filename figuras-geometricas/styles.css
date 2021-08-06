@@ -1,13 +1,13 @@
 :root {
   /* CSS HEX */
-  --charcoal: #264653ff;
+  --main-color: #264653ff;
   --persian-green: #2a9d8fff;
   --orange-yellow-crayola: #e9c46aff;
   --sandy-brown: #f4a261ff;
   --burnt-sienna: #e76f51ff;
 
   --background-page: #ffff;
-  --height-header: 52px;
+  --height-header: 60px;
 }
 
 *,
@@ -26,7 +26,8 @@ body {
 
 .header {
   height: var(--height-header);
-  background-color: var(--charcoal);
+  background-color: #ffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,5 +40,10 @@ body {
 
 .header > .header-title {
   font-size: 1.5rem;
-  color: #ffff;
+  color: var(--main-color);
+}
+
+main {
+  height: calc(100% - var(--height-header));
+  background-color: #f3f8fb;
 }
