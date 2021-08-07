@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+    />
     <title>Curso Práctico de JavaScript - Figuras geometricas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,7 +26,64 @@
       <h1 class="header-title">Figuras geometricas</h1>
     </header>
 
-    <main></main>
+    <main>
+      <section class="card-figure square">
+        <div class="card-title">
+          <p>Cuadrado</p>
+        </div>
+
+        <div class="card-content">
+          <p class="card-content__title">¿Cuánto mide uno de sus lados?</p>
+
+          <div class="card-content__inputs">
+            <input type="text" placeholder="Lado" inputmode="numeric" />
+          </div>
+
+          <div class="card-content__actions">
+            <button>Calcular</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card-figure triangle">
+        <div class="card-title">
+          <p>Triángulo</p>
+        </div>
+
+        <div class="card-content">
+          <p class="card-content__title">¿Cuánto miden sus lados?</p>
+
+          <div class="card-content__inputs">
+            <input type="text" placeholder="Lado" inputmode="numeric" />
+            <input type="text" placeholder="Lado" inputmode="numeric" />
+            <input type="text" placeholder="Lado" inputmode="numeric" />
+            <input type="text" placeholder="Altura" inputmode="numeric" />
+          </div>
+
+          <div class="card-content__actions">
+            <button>Calcular</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card-figure circle">
+        <div class="card-title">
+          <p>Circulo</p>
+        </div>
+
+        <div class="card-content">
+          <p class="card-content__title">¿Cuánto mide su radio?</p>
+
+          <div class="card-content__inputs">
+            <input type="text" placeholder="Radio" inputmode="numeric" />
+          </div>
+
+          <div class="card-content__actions">
+            <button>Calcular</button>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="./script.js"></script>
   </body>

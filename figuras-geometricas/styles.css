@@ -6,7 +6,7 @@
   --sandy-brown: #f4a261ff;
   --burnt-sienna: #e76f51ff;
 
-  --background-page: #ffff;
+  --background-page: #f3f8fb;
   --height-header: 60px;
 }
 
@@ -21,7 +21,11 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--background-page);
-  height: 100vh;
+}
+
+input::placeholder {
+  font-style: italic;
+  color: #6a6161;
 }
 
 .header {
@@ -41,9 +45,90 @@ body {
 .header > .header-title {
   font-size: 1.5rem;
   color: var(--main-color);
+  letter-spacing: 2px;
 }
 
 main {
-  height: calc(100% - var(--height-header));
-  background-color: #f3f8fb;
+  max-width: 1200px;
+  width: 90%;
+  margin: 25px auto 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card-figure {
+  min-height: 340px;
+  background-color: #ffff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--color-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-figure .card-title {
+  background-color: var(--color-card);
+}
+
+.card-title p {
+  padding: 0.5rem 0;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #ffff;
+}
+
+.card-content {
+  padding: 1rem 1.25rem;
+  flex-grow: 1;
+}
+
+.card-content .card-content__title {
+  color: var(--color-card);
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.card-content .card-content__inputs {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 1rem;
+  gap: 0.5rem;
+}
+
+.card-content .card-content__inputs input {
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  border: 1px solid rgb(221, 221, 221);
+  font-size: 1.1rem;
+}
+
+.card-content .card-content__actions {
+  display: flex;
+  justify-content: center;
+}
+
+.card-content button {
+  background-color: var(--color-card);
+  color: #ffff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  border: transparent;
+  font-size: 1.1rem;
+}
+
+.card-figure.square {
+  --color-card: var(--sandy-brown);
+}
+
+.card-figure.triangle {
+  --color-card: var(--orange-yellow-crayola);
+}
+
+.card-figure.circle {
+  --color-card: var(--burnt-sienna);
 }
