@@ -36,12 +36,19 @@
           <p class="card-content__title">¿Cuánto mide uno de sus lados?</p>
 
           <div class="card-content__inputs">
-            <input type="text" placeholder="Lado" inputmode="numeric" />
+            <input
+              type="text"
+              placeholder="Lado"
+              inputmode="numeric"
+              name="ladoCuadrado"
+            />
           </div>
 
           <div class="card-content__actions">
-            <button>Calcular</button>
+            <button id="btn-square">Calcular</button>
           </div>
+
+          <div class="card-results" id="card-results__square"></div>
         </div>
       </section>
 
@@ -61,7 +68,7 @@
           </div>
 
           <div class="card-content__actions">
-            <button>Calcular</button>
+            <button id="btn-triangle">Calcular</button>
           </div>
         </div>
       </section>
@@ -79,7 +86,7 @@
           </div>
 
           <div class="card-content__actions">
-            <button>Calcular</button>
+            <button id="btn-circle">Calcular</button>
           </div>
         </div>
       </section>

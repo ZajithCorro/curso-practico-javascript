@@ -110,6 +110,7 @@ main {
 .card-content .card-content__actions {
   display: flex;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .card-content button {
@@ -119,6 +120,13 @@ main {
   border-radius: 5px;
   border: transparent;
   font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.card-content .card-results p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--color-card);
 }
 
 .card-figure.square {
