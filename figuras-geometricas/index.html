@@ -61,15 +61,37 @@
           <p class="card-content__title">¿Cuánto miden sus lados?</p>
 
           <div class="card-content__inputs">
-            <input type="text" placeholder="Lado" inputmode="numeric" />
-            <input type="text" placeholder="Lado" inputmode="numeric" />
-            <input type="text" placeholder="Lado" inputmode="numeric" />
-            <input type="text" placeholder="Altura" inputmode="numeric" />
+            <input
+              type="text"
+              placeholder="Lado"
+              inputmode="numeric"
+              name="lado1"
+            />
+            <input
+              type="text"
+              placeholder="Lado"
+              inputmode="numeric"
+              name="lado2"
+            />
+            <input
+              type="text"
+              placeholder="Lado base"
+              inputmode="numeric"
+              name="ladoBase"
+            />
+            <input
+              type="text"
+              placeholder="Altura"
+              inputmode="numeric"
+              name="altura"
+            />
           </div>
 
           <div class="card-content__actions">
             <button id="btn-triangle">Calcular</button>
           </div>
+
+          <div class="card-results" id="card-results__triangle"></div>
         </div>
       </section>
 

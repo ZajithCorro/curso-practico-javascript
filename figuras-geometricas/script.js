@@ -7,11 +7,8 @@ btnTriangle.addEventListener("click", printDataTriangle);
 btnCircle.addEventListener("click", printDataCircle);
 
 function printDataSquare() {
-  console.log(".(");
   const inputSideSquare = document.querySelector('input[name="ladoCuadrado"]');
   const divResultsSquare = document.querySelector("#card-results__square");
-
-  console.log(inputSideSquare);
 
   const sizeSideSquare = Number(inputSideSquare.value);
   const perimeter = sizeSideSquare * 4;
@@ -21,7 +18,24 @@ function printDataSquare() {
 }
 
 function printDataTriangle() {
-  console.log("🥳");
+  const divResultsTriangle = document.querySelector("#card-results__triangle");
+  const inputLado1Triangle = document.querySelector('input[name="lado1"]');
+  const inputLado2Triangle = document.querySelector('input[name="lado2"]');
+  const inputLadoBaseTriangle = document.querySelector(
+    'input[name="ladoBase"]'
+  );
+  const inputAlturaTriangle = document.querySelector('input[name="altura"]');
+
+  const sizeSide1Triangle = Number(inputLado1Triangle.value);
+  const sizeSide2Triangle = Number(inputLado2Triangle.value);
+  const sizeSideBaseTriangle = Number(inputLadoBaseTriangle.value);
+  const sizeHeightTriangle = Number(inputAlturaTriangle.value);
+
+  const perimeter =
+    sizeSide1Triangle + sizeSide2Triangle + sizeSideBaseTriangle;
+  const area = (sizeSideBaseTriangle * sizeHeightTriangle) / 2;
+
+  divResultsTriangle.innerHTML = `<p>El Perimetro es: <em>${perimeter}</em> y el Área es: <em>${area}</em></p>`;
 }
 
 function printDataCircle() {
