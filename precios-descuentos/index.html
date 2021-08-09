@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+    />
+    <title>Curso Práctico de JavaScript - Precios y descuentos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="./statics/coupon.svg"
+        alt="Figuras geometricas"
+        class="header-image"
+      />
+      <h1 class="header-title">Precios y descuentos</h1>
+    </header>
+
+    <main>
+      <div class="card">
+        <div class="card-header">
+          <h2>Calcular descuento</h2>
+        </div>
+        <div class="card-content">
+          <div class="input-container">
+            <label for="price">¿Cuál es el precio?</label>
+            <input type="text" name="price" id="price" inputmode="decimal" />
+          </div>
+
+          <div class="input-container">
+            <label for="discount">¿Cuánto es el porcentaje de descuento?</label>
+            <input
+              type="text"
+              name="discount"
+              id="discount"
+              inputmode="numeric"
+            />
+          </div>
+
+          <button id="btn-calcular">Calcular precio</button>
+
+          <div class="resultados" id="resultados"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

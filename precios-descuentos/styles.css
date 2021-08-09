@@ -1,0 +1,123 @@
+:root {
+  /* CSS HEX */
+  --main-color: #264653ff;
+  --persian-green: #2a9d8fff;
+  --orange-yellow-crayola: #e9c46aff;
+  --sandy-brown: #f4a261ff;
+  --burnt-sienna: #e76f51ff;
+
+  --background-page: #f3f8fb;
+  --height-header: 60px;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-page);
+}
+
+input::placeholder {
+  font-style: italic;
+  color: #6a6161;
+}
+
+.header {
+  height: var(--height-header);
+  background-color: #ffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .header-image {
+  width: 45px;
+  margin-right: 1rem;
+}
+
+.header > .header-title {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  letter-spacing: 2px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 25px auto 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 90%;
+  max-width: 400px;
+  background-color: #ffff;
+  border-radius: 10px;
+  height: 350px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  background-color: var(--sandy-brown);
+}
+
+.card-header h2 {
+  padding: 0.5rem 0;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #ffff;
+  font-size: 1rem;
+}
+
+.card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.25rem;
+  gap: 1rem;
+}
+
+.card-content .input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content .input-container label {
+  margin-bottom: 0.25rem;
+  color: var(--main-color);
+  font-weight: 500;
+}
+
+.card-content .input-container input {
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  border: 1px solid rgb(221, 221, 221);
+  font-size: 1.1rem;
+}
+
+.card-content button {
+  background-color: var(--sandy-brown);
+  color: #ffff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  border: transparent;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.card-content .resultados {
+  font-size: 1.1rem;
+  color: var(--persian-green);
+  text-align: center;
+}
