@@ -39,5 +39,14 @@ function printDataTriangle() {
 }
 
 function printDataCircle() {
-  console.log("🥳");
+  const divResultsCircle = document.querySelector("#card-results__circle");
+  const inputRadiusCircle = document.querySelector('input[name="radius"]');
+
+  const sizeRadiusCircle = Number(inputRadiusCircle.value);
+  const diameter = sizeRadiusCircle * 2;
+
+  const perimeter = (Math.PI * diameter).toFixed(2);
+  const area = (Math.PI * sizeRadiusCircle ** 2).toFixed(2);
+
+  divResultsCircle.innerHTML = `<p>El Perimetro es: <em>${perimeter}</em> y el Área es: <em>${area}</em></p>`;
 }
