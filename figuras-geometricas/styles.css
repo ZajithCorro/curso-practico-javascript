@@ -140,3 +140,7 @@ main {
 .card-figure.circle {
   --color-card: var(--burnt-sienna);
 }
+
+.card-figure.isosceles {
+  --color-card: var(--persian-green);
+}

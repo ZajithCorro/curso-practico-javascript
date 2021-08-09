@@ -1,10 +1,12 @@
 const btnSquare = document.querySelector("#btn-square");
 const btnTriangle = document.querySelector("#btn-triangle");
 const btnCircle = document.querySelector("#btn-circle");
+const btnTriangleIsosceles = document.querySelector("#btn-triangle-isosceles");
 
 btnSquare.addEventListener("click", printDataSquare);
 btnTriangle.addEventListener("click", printDataTriangle);
 btnCircle.addEventListener("click", printDataCircle);
+btnTriangleIsosceles.addEventListener("click", printDataTriangleIsosceles);
 
 function printDataSquare() {
   const inputSideSquare = document.querySelector('input[name="ladoCuadrado"]');
@@ -49,4 +51,34 @@ function printDataCircle() {
   const area = (Math.PI * sizeRadiusCircle ** 2).toFixed(2);
 
   divResultsCircle.innerHTML = `<p>El Perimetro es: <em>${perimeter}</em> y el Área es: <em>${area}</em></p>`;
+}
+
+function printDataTriangleIsosceles() {
+  const divResultsTriangleIsosceles = document.querySelector(
+    "#card-results__triangle-isosceles"
+  );
+  const inputSideTriangle = document.querySelector(
+    'input[name="lado1Isosceles"]'
+  );
+  const inputSide2Triangle = document.querySelector(
+    'input[name="lado2Isosceles"]'
+  );
+  const inputSide3Triangle = document.querySelector(
+    'input[name="lado3Isosceles"]'
+  );
+
+  const sizeSide1Triangle = Number(inputSideTriangle.value);
+  const sizeSide2Triangle = Number(inputSide2Triangle.value);
+  const sizeSide3Triangle = Number(inputSide3Triangle.value);
+
+  if (sizeSide1Triangle !== sizeSide2Triangle)
+    return alert("Los lados deben ser iguales 😢");
+
+  const baseTriangle = sizeSide3Triangle / 2;
+  const height = Math.sqrt(sizeSide1Triangle ** 2 - baseTriangle ** 2);
+
+  const perimeter = sizeSide1Triangle + sizeSide2Triangle + sizeSide3Triangle;
+  const area = (sizeSide3Triangle * height) / 2;
+
+  divResultsTriangleIsosceles.innerHTML = `<p>El Perimetro es: <em>${perimeter}</em> y el Área es: <em>${area}</em></p>`;
 }
